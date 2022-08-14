@@ -93,6 +93,7 @@ class Permalink {
     this._spinBoxConfig(this.OPTIONS.STARTING_HCS, 0, 6),
     this._booleanConfig(this.OPTIONS.REMOVE_MUSIC),
     this._booleanConfig(this.OPTIONS.RANDOMIZE_ENEMIES),
+    this._booleanConfig(this.OPTIONS.WIND_WAKER_HD),
   ];
 
   static _stringConfig(optionName) {

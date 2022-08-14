@@ -265,6 +265,10 @@ export default class Launcher extends React.PureComponent {
             labelText: 'Skip Boss Rematches',
             optionName: Permalink.OPTIONS.SKIP_REMATCH_BOSSES,
           }),
+          this.toggleInput({
+            labelText: 'Wind Waker HD',
+            optionName: Permalink.OPTIONS.WIND_WAKER_HD,
+          }),
         ]}
       />
     );
