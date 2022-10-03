@@ -4,13 +4,14 @@ class Locations {
   static initialize(itemLocationsFile) {
     this.locations = {};
 
-    _.forEach(itemLocationsFile, (locationData, locationName) => {
+    _.forEach(itemLocationsFile, (locationData) => {
+      const locationName = locationData["Names"]["English"];
       const {
         generalLocation,
         detailedLocation,
       } = this.splitLocationName(locationName);
 
-      const filteredLocationData = _.pick(locationData, ['Need', 'Original item', 'Types']);
+      const filteredLocationData = _.pick(locationData, ['Original item', 'Types']);
 
       _.forEach(filteredLocationData, (infoValue, infoKey) => {
         this.setLocation(generalLocation, detailedLocation, _.camelCase(infoKey), infoValue);

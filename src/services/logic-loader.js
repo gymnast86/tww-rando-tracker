@@ -4,8 +4,9 @@ import Settings from './settings';
 
 class LogicLoader {
   static async loadLogicFiles() {
-    const itemLocationsFile = await this._loadLogicFile('item_locations.txt');
-    const macrosFile = await this._loadLogicFile('macros.txt');
+    const itemLocationsFile = await this._loadLogicFile('location_data.yaml');
+    const macrosFile = await this._loadLogicFile('macros.yaml');
+    const worldGraph = await this._loadLogicFile('world.yaml');
 
     return {
       itemLocationsFile,
@@ -27,7 +28,7 @@ class LogicLoader {
   }
 
   static _logicFileUrl(fileName) {
-    return `https://raw.githubusercontent.com/LagoLunatic/wwrando/${Settings.getVersion()}/logic/${fileName}`;
+    return `http://localhost:8080/src/data/${fileName}`;
   }
 }
 
