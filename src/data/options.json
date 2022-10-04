@@ -24,6 +24,7 @@
   "progression_battlesquid",
   "progression_savage_labyrinth",
   "progression_island_puzzles",
+  "progression_obscure",
 
   "keylunacy",
   "randomize_entrances",
@@ -49,6 +50,5 @@
   "starting_pohs",
   "starting_hcs",
   "remove_music",
-  "randomize_enemies",
-  "wind_waker_hd"
+  "randomize_enemies"
 ]

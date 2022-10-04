@@ -215,6 +215,10 @@ export default class Launcher extends React.PureComponent {
             labelText: 'Eye Reef Chests',
             optionName: Permalink.OPTIONS.PROGRESSION_EYE_REEF_CHESTS,
           }),
+          this.toggleInput({
+            labelText: 'Obscure',
+            optionName: Permalink.OPTIONS.PROGRESSION_OBSCURE,
+          })
         ]}
       />
     );
@@ -264,11 +268,7 @@ export default class Launcher extends React.PureComponent {
           this.toggleInput({
             labelText: 'Skip Boss Rematches',
             optionName: Permalink.OPTIONS.SKIP_REMATCH_BOSSES,
-          }),
-          this.toggleInput({
-            labelText: 'Wind Waker HD',
-            optionName: Permalink.OPTIONS.WIND_WAKER_HD,
-          }),
+          })
         ]}
       />
     );

@@ -3,7 +3,6 @@ import _ from 'lodash';
 import CAVES from '../data/caves.json';
 import CHARTS from '../data/charts.json';
 import HAS_ACCESSED_LOCATION_TWEAKS from '../data/has-accessed-location-tweaks.json';
-import HD_LOGIC_REPLACEMENTS from '../data/hd-logic-replacements'
 import ISLANDS from '../data/islands.json';
 
 import Locations from './locations';
@@ -33,9 +32,6 @@ class LogicTweaks {
     this._updateTingleStatueReward();
     this._updateSunkenTriforceTypes();
     this._applyHasAccessedLocationTweaksForLocations();
-    if (Settings.getOptionValue(Permalink.OPTIONS.WIND_WAKER_HD)) {
-      this._updateLogicForHD();
-    }
   }
 
   static _updateMacros() {
@@ -84,21 +80,6 @@ class LogicTweaks {
           Settings.FLAGS.SUNKEN_TRIFORCE,
         );
       }
-    });
-  }
-
-  static _updateLogicForHD() {
-
-    // Apply some minor logic changes for HD
-    _.forEach(HD_LOGIC_REPLACEMENTS, (loc) => {
-      // console.log(loc.generalLocation + " " + loc.detailedLocation + " " + loc.oldNeeds + " " + loc.newNeeds);
-      // console.log(Locations.getLocation(loc.generalLocation, loc.detailedLocation, Locations.KEYS.NEED));
-      Locations.setLocation(
-        loc.generalLocation,
-        loc.detailedLocation,
-        Locations.KEYS.NEED,
-        loc.newNeeds,
-      );
     });
   }
 
@@ -165,9 +146,9 @@ class LogicTweaks {
   }
 
   static _updateChartMacros() {
-    if (!Settings.getOptionValue(Permalink.OPTIONS.RANDOMIZE_CHARTS)) {
-      return;
-    }
+    // if (!Settings.getOptionValue(Permalink.OPTIONS.RANDOMIZE_CHARTS)) {
+    //   return;
+    // }
 
     _.forEach(CHARTS, (chart, index) => {
       // assume everything is a Treasure Chart and clear any additional requirements like

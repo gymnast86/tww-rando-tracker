@@ -16,6 +16,7 @@ Object {
   "MAIL": "Mail",
   "MINIGAME": "Minigame",
   "MISC": "Misc",
+  "OBSCURE": "Obscure",
   "OTHER_CHEST": "Other Chest",
   "PLATFORM": "Platform",
   "PUZZLE_SECRET_CAVE": "Puzzle Secret Cave",

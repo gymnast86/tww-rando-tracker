@@ -23,7 +23,7 @@ class Permalink {
     [this.OPTIONS.SWORD_MODE]: SWORD_MODE_OPTIONS,
   };
 
-  static DEFAULT_PERMALINK = 'MS45LjAAU2VlZAAHAQMADgBAAwAAAAAAAQAA';
+  static DEFAULT_PERMALINK = 'MS45LjAAU2VlZAAHAQMAHACABgQAAAAAAgAA';
 
   static decode(permalinkString) {
     const binaryString = BinaryString.fromBase64(permalinkString);
@@ -71,6 +71,7 @@ class Permalink {
     this._booleanConfig(this.OPTIONS.PROGRESSION_BATTLESQUID),
     this._booleanConfig(this.OPTIONS.PROGRESSION_SAVAGE_LABYRINTH),
     this._booleanConfig(this.OPTIONS.PROGRESSION_ISLAND_PUZZLES),
+    this._booleanConfig(this.OPTIONS.PROGRESSION_OBSCURE),
     this._booleanConfig(this.OPTIONS.KEYLUNACY),
     this._dropdownConfig(this.OPTIONS.RANDOMIZE_ENTRANCES),
     this._booleanConfig(this.OPTIONS.RANDOMIZE_CHARTS),
@@ -93,7 +94,6 @@ class Permalink {
     this._spinBoxConfig(this.OPTIONS.STARTING_HCS, 0, 6),
     this._booleanConfig(this.OPTIONS.REMOVE_MUSIC),
     this._booleanConfig(this.OPTIONS.RANDOMIZE_ENEMIES),
-    this._booleanConfig(this.OPTIONS.WIND_WAKER_HD),
   ];
 
   static _stringConfig(optionName) {

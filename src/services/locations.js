@@ -1,8 +1,20 @@
 import _ from 'lodash';
 
+import LOCATION_CHANGES from "../data/hd-location-changes.json";
+
 class Locations {
   static initialize(itemLocationsFile) {
     this.locations = {};
+
+    console.log(itemLocationsFile)
+
+    _.forEach(LOCATION_CHANGES, (data, name) => {
+      console.log(data);
+      console.log(name);
+      itemLocationsFile[name] = data;
+    });
+
+    console.log(itemLocationsFile);
 
     _.forEach(itemLocationsFile, (locationData, locationName) => {
       const {
